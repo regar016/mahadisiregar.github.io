@@ -21,7 +21,6 @@ title:            'Writing is Important'
 tagline:          'archiving & sharing'
 description:      'Big Data Engineer -> decision by learning the data'
 url:              localhost:4000
-baseurl:          /mahadisiregar.github.io
 
 author:
   name:           Mahadi Siregar
