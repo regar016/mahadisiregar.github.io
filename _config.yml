@@ -17,23 +17,31 @@
 title:            'Writing is Important'
 tagline:          'archiving & sharing'
 description:      'Big Data Engineer -> decision by data learning'
-url:              http://mahadisiregar.github.io
+url:              https://mahadisiregar.com
 
 author:
   name:           Mahadi Siregar
   email:          regar.016@gmail.com
   github:         regar016
-  twitter:        regar016
-  linkedin:       mahadi-siregar
   facebook:       regar.016
-  url:            http://mahadisiregar.com
+  linkedin:       mahadisiregar
+  instagram:      mahadi.siregar
+  twitter:        MahadiSiregar
+  url:            https://mahadisiregar.com
   bio:            Big Data Engineer yang sebelumnya adalah Java Developer (Spring) & AngularJS.
+  email_md5:      9b1f20defba8dbbc3d1063c0d6a29b47
 
 # Build settings
 markdown: kramdown
 theme: minima
 plugins:
   - jekyll-feed
+
+# Google Analytics
+#google_analytics_tracking_id: UA-36102948-1
+
+# Facebook Comments
+facebook_appid: 1441035232668468
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list

@@ -1,18 +1,19 @@
 ---
 layout: page
-title: About
-permalink: /about/
+title: "About Me"
+comments: false
+sharing: false
+footer: false
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
+## Mahadi Siregar ##
 
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
+Big Data Engineer yang sebelumnya adalah Java Developer (Spring) & AngularJS.
 
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
+## Contact
 
-
-[jekyll-organization]: https://github.com/jekyll
+  * Email : [regar.016@gmail.com](regar.016@gmail.com)
+  * LinkedIn : [https://github.com/mahadisiregar](https://github.com/mahadisiregar)
+  * Facebook : [https://www.facebook.com/regar.016](https://www.facebook.com/regar.016)
+  * instagram : [mahadi.siregar](https://www.instagram.com/mahadi.siregar/)
+  * Twitter : [MahadiSiregar](https://twitter.com/MahadiSiregar)

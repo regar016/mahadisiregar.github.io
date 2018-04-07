@@ -205,7 +205,7 @@ header h1 {
 
 #profile_picture {
 	border-radius: 2%;
-	height: 220px;
+	height: 200px;
 }
 
 
@@ -397,7 +397,11 @@ footer {
 	width:275px;
 	float:left;
 	position:fixed;
-	margin: 550px -90px;
+	margin: 550px -120px;
+}
+
+footer p{
+	margin-top: -20px
 }
 
 img.avatar {

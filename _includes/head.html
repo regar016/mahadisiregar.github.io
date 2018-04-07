@@ -5,8 +5,11 @@
   <!-- Enable responsiveness on mobile devices-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+
   <!-- Metadata for Facebook SDK -->
-  <!-- <meta property="fb:app_id" content="269506799827290" /> -->
+  <meta property="fb:app_id" content="1441035232668468" />
 
   <title>
     {% if page.title %}
@@ -28,5 +31,13 @@
 
   <!-- CSS -->
   <link rel="stylesheet" href="/css/main.css">
+
+  <!-- redirect to https -->
+  <script>
+    var host = "mahadisiregar.com";
+    if ((host == window.location.host) && (window.location.protocol != 'https:')) {
+      window.location = window.location.toString().replace(/^http:/, "https:");
+    }
+  </script>
 
 </head>
