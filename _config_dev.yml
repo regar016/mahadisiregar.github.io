@@ -13,11 +13,15 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
+
+permalink: /:categories/:title/
+
+
 title:            'Writing is Important'
 tagline:          'archiving & sharing'
-description:      'Big Data Engineer -> decision by data learning'
+description:      'Big Data Engineer -> decision by learning the data'
 url:              localhost:4000
-baseurl:          /
+baseurl:          /mahadisiregar.github.io
 
 author:
   name:           Mahadi Siregar
