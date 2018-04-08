@@ -38,7 +38,12 @@ author:
 markdown: kramdown
 theme: minima
 plugins:
+  - jekyll-paginate
   - jekyll-feed
+
+
+paginate: 5
+
 
 # Google Analytics
 #google_analytics_tracking_id: UA-36102948-1
