@@ -134,7 +134,6 @@ blockquote {
 #table-of-contents {
 	margin-bottom: 0.5em;
 }
-
 #markdown-toc {
 	font-size: 0.9em;
 	display: inline-block;
@@ -187,12 +186,6 @@ dt {
 th {
 	color:#444;
 }
-
-/* Page Font Setting*/
-
-/*.post-list-heading{
-	font-size: 16px;
-}*/
 
 /* Header / Sidebar Top */
 
@@ -351,13 +344,17 @@ nav li a.active:hover {
 /* Post Content */
 
 .post-title {
-	margin-bottom: 2px;
+	margin-bottom: 0;
 }
-.post-meta{
-	font-size: 10px;
-	margin-bottom: 12px;
+.post-date {
+	margin-bottom: 0;
 }
-
+.post-meta,
+.post-meta a {
+	color: #aaa;
+	margin-bottom: 0;
+	white-space: nowrap;
+},
 .post-meta a:hover,
 .post-meta a:active {
 	text-decoration: underline;
