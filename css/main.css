@@ -29,6 +29,10 @@ img {
 	max-width:100%;
 }
 
+.text-justify {
+  text-align: justify;
+}
+
 
 /* Typography */
 
@@ -39,6 +43,10 @@ h1, h2, h3, h4, h5, h6 {
 
 p, ul, ol, table, pre, dl {
 	margin:0 0 20px;
+}
+
+p {
+	text-align: justify;
 }
 
 h1, h2, h3 {
@@ -396,11 +404,11 @@ a.post-banner:hover { background-size: auto 104%; }
 
 footer {
 	font-size: 14px;
-	text-align: center;
+	text-align: left;
 	width:275px;
 	float:left;
 	position:fixed;
-	margin: 550px -120px;
+	margin: 550px -100px;
 }
 
 footer p{

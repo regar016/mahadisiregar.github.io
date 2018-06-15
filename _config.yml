@@ -8,6 +8,18 @@
 # For technical reasons, this file is *NOT* reloaded automatically when you use
 # 'bundle exec jekyll serve'. If you change this file, please restart the server process.
 
+
+# Conversion
+markdown: kramdown
+
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+# Permalinks
+permalink:        /:categories/:title/
+
+
 # Site settings
 # These are used to personalize your new site. If you look in the HTML files,
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
@@ -28,14 +40,15 @@ author:
   instagram:      mahadi.siregar
   twitter:        MahadiSiregar
   url:            https://mahadisiregar.com
-  bio:            Big Data Engineer yang sebelumnya adalah Java Developer (Spring) & AngularJS.
+  bio:            Big Data Engineer - Java Developer - Scala - AngularJS 1 - PHP
   email_md5:      9b1f20defba8dbbc3d1063c0d6a29b47
 
 # Build settings
-markdown: kramdown
 theme: minima
 plugins:
   - jekyll-feed
+
+paginate:         5
 
 # Google Analytics
 #google_analytics_tracking_id: UA-36102948-1
