@@ -65,5 +65,5 @@ Yang ingin saya tuliskan disini hanya seputar informasi dasar mengenai scala.
 	```
 6.	Masih terdapat hal-hal lain yang di scala ada di Java tidak, misalnya case class, dll
 
-Akan dibahas lebih detail di part masing-masing topik.
+Bagaimana? Jauh lebih menarik scala dibandingkan dengan Java (misalnya) kan? Lebih detail mengenai masing-masing topik akan dibahas di part masing-masing topik.
 
