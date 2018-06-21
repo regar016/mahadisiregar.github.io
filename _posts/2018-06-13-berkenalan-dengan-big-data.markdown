@@ -1,12 +1,14 @@
 ---
 layout: post
-title:  "Perkenalan dengan Big Data"
+title:  "Berkenalan dengan Big Data"
 date:   2018-06-13 02:12:16 +0700
 categories: bigdata
 fbcomments: true
 tags: [bigdata, hadoop, cloudera]
 
 ---
+
+![image-title-here](/images/big_data_image.jpg){:class="img-responsive"}
 
 Apa itu *big data*? Big itu besar, data itu ya data. Data yang besar. Pengertian sampahnya kira-kira begitulah.
 
