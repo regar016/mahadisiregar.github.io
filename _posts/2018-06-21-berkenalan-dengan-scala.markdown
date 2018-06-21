@@ -12,7 +12,7 @@ Bermain dengan big data (hadoop), maka kita harus tahu salah satu dari bahasa pe
 
 Sebelumnya silakan install Spark & Scala terlebih dahulu di host machine Anda. Buat yang menggunakan OSX bisa mengikuti instruksi [berikut](https://medium.freecodecamp.org/installing-scala-and-apache-spark-on-mac-os-837ae57d283f)
 
-Atau kalau malas install dan hanya ingin coba-coba, silakan gunakan compiler [berikut](https://scalafiddle.io)
+Atau kalau malas install dan hanya ingin coba-coba, silakan gunakan <!--more-->compiler [berikut](https://scalafiddle.io)
 
 Yang ingin saya tuliskan disini hanya seputar informasi dasar mengenai scala.
 1.	tidak perlu titik koma/semicolon (;)
