@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Berkenalan dengan Scala"
-date:   2018-06-18 08:44:16 +0700
+date:   2018-06-21 10:44:16 +0700
 categories: bigdata
 fbcomments: true
 tags: [bigdata, hadoop, scala, spark]
