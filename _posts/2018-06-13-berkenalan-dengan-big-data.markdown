@@ -8,7 +8,7 @@ tags: [bigdata, hadoop, cloudera]
 
 ---
 
-![image-title-here](/images/big_data_image.jpg){:class="img-responsive"}
+![big data](/images/big_data_image.jpg){:class="img-responsive"}
 
 Apa itu *big data*? Big itu besar, data itu ya data. Data yang besar. Pengertian sampahnya kira-kira begitulah.
 
