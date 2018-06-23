@@ -20,7 +20,7 @@ Pada ilustrasi di atas, si John menangani project A, Doe menangani project B, ds
 
 ![hadoop architecture ilustration](/images/hadoop-architecture-ilustration-2.png){:class="img-responsive"}
 
-Ilustrasi di atas bisa dimirip-miripkan dengan Hadoop. Project Manager pada gambar tersebut bisa diilustrasikan sebagai Master Node, lalu John, Doe, dkk sebagai Slave Node. Lebih jauh, Master Node ini disebut sebagai ***NameNode*** dan Slave node disebut sebagai ***DataNode***. Lalu bagaimana jika si NameNode yang down? Maka muncullah ***Secondary NameNode***. 
+Ilustrasi di atas bisa dimirip-miripkan dengan Hadoop. Project Manager pada gambar tersebut bisa diilustrasikan sebagai Master Node, lalu John, Doe, dkk sebagai Slave Node. Lebih jauh, Master Node ini disebut sebagai ***NameNode*** dan Slave node disebut sebagai ***DataNode***. Jika salah satu datanode down, namenode akan memberikan alamat data dari node lain. Lalu bagaimana jika si NameNode yang down? Maka muncullah ***Secondary NameNode***. 
 
 ![hadoop architecture](/images/hadoop-architecture-1.png){:class="img-responsive"}
 
