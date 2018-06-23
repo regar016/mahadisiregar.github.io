@@ -20,7 +20,7 @@ Pada ilustrasi di atas, si John menangani project A, Doe menangani project B, ds
 
 ![hadoop architecture ilustration](/images/hadoop-architecture-ilustration-2.png){:class="img-responsive"}
 
-Ilustrasi di atas bisa dimirip-miripkan dengan Hadoop. Project Manager pada gambar tersebut bisa diilustrasikan sebagai Master Node, lalu John, Doe, dkk sebagai Slave Node. Lebih jauh, Master Node ini disebut sebagai ***NameNode*** dan Slave node disebut sebagai ***DataNode***. Jika salah satu datanode down, namenode akan memberikan alamat data dari node lain. Lalu bagaimana jika si NameNode yang down? Maka muncullah ***Secondary NameNode***. 
+Ilustrasi di atas bisa dimirip-miripkan dengan Hadoop. Project Manager pada gambar tersebut bisa diilustrasikan sebagai Master Node, lalu John, Doe, dkk sebagai Slave Node. Lebih jauh, Master Node ini disebut sebagai ***NameNode*** dan Slave node disebut sebagai ***DataNode***. Jika salah satu datanode down, namenode akan memberikan alamat data dari datanode lain sehingga data masih tetap tersedia. Karena masing-masing data block tersebut di-replikasi 3 dan masing-masing replikasi disimpan di datanode berbeda. Replikasi menjadikan data consume 3x lipat disk dong? Boros amat. Iya, data block akan consume disk 3x (default) lipat. Boros? Ya itu adalah cara untuk menjaga data tetap tersedia, dan di Hadoop terdapat namanya **compression** yang menjadikan ukuran file menjadi jauh lebih kecil dari seharusnya. Mengenai compresion akan dibahas di part terpisah. Lalu bagaimana jika si NameNode yang down? Maka muncullah ***Secondary NameNode***. 
 
 ![hadoop architecture](/images/hadoop-architecture-1.png){:class="img-responsive"}
 
@@ -60,7 +60,11 @@ Lalu bagaimana bagusnya? sesuaikan ukuran block size dengan ukuran file rata2 An
 
 *menjelaskan lebih detail tentang Yarn, Node Manager, dll*
 
-***Bagaimana Proses Penyimpanan Data di Hadoop?***
+***Bagaimana Proses Penulisan Data ke HDFS?***
 
-*menjelaskan lebih detail mulai dari client menjalankan commit put, atau copy, dll hingga data tersimpan di HDFS*
+![HDFS write process](/images/hadoop-tutorial-writeops.png){:class="img-responsive"}
+
+Menulis data ke HDFS dilakukan melalui HDFS Client. Node darimana kita melakukan aktivitas menulis disebut client node. Ketika kita hendak menulis/put data ke HDFS, client terlebih dahulu membuat temporary file sesuai ukuran BLOCK size di local disk. Lalu client node akan berkomunikasi dengan namenode. Namenode akan mengalokasikan block untuk data tersebut kemudian memberikan IP datanode dan alamat block yang akan digunakan. HDFS client kemudian akan berkomunikasi dengan datanode tersebut untuk menulis file. Sebelumnya, namenode akan memberikan 3 IP datanode (sesuai replikasi). Pertama data akan ditulis ke datanode-1. Lalu datanode-1 akan meneruskan data ke datanode-2 untuk replikasi, dan selanjutnya datanode-2 ke datanode-3 untuk replikasi ke-3. Setelah selesai, client akan menginformasikan ke namenode bahwa operasi tulis data sudah selesai. Lalu namenode akan menyimpan informasi data tersebut ke persistent store (EditLogs lalu FsImages).
+
+*Note: jangan lupa perhatikan garis-garis aliran data-nya gan, switch, dan rack. Karena arsitektur cluster hadoop perlu memperhatikan pengaturan jaringan, rack, dll. DataNode diletakkan di switch yang berbeda misalnya dari utility node (NameNode, dll), dst*
 
