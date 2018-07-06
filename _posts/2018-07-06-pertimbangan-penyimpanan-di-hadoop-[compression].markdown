@@ -1,5 +1,14 @@
+---
+layout: post
+title:  "Pertimbangan Penyimpanan Data di Hadoop [Compression]"
+date:   2018-07-06 15:44:16 +0700
+categories: bigdata
+fbcomments: true
+tags: [bigdata, hadoop]
 
-Ketika mulai menggunakan Hadoop, salah satu yang sangat penting diperhatikan adalah bagaimana kita akan menyimpan data di hadoop. Bagaimana ini dalam artian format file yang kita gunakan apa, compression, disimpan dimana (HDFS, HBase, dll), directory HDFS akan seperti apa, dll. Mengapa ini penting? Misalkan dalam hal compression, compressi yang tepat akan mengurangi penggunaan disk. Tidak hanya disk, distributed processing identik dengan jaringan, sehingga data yang bergerak di jaringan pun lebih ringan dan lebih cepat. Biar lebih detail, kita bahas sedikit lebih jauh.
+---
+
+Ketika mulai menggunakan Hadoop, salah satu yang sangat penting diperhatikan adalah bagaimana kita akan menyimpan data di hadoop. Bagaimana ini dalam artian format file yang kita gunakan apa, compression, disimpan dimana (HDFS, HBase, dll), directory HDFS akan seperti apa, dll. Mengapa ini penting? Misalkan dalam hal compression, compressi yang tepat akan mengurangi penggunaan disk. Tidak hanya disk, distributed processing identik dengan jaringan, sehingga data yang bergerak di jaringan pun lebih ringan dan lebih cepat. Biar lebih detail, kita bahas sedikit lebih jauh. <!--more-->
 
 ### Compression
 
