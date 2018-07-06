@@ -38,6 +38,7 @@ Lalu apa fungsi masing-masing node tersebut?
 2.	Menghandle read & write request dari client
 
 ***Secondary NameNode***
+
 Namenode merupakan master-nya di HDFS. Sekalinya namenode rusak, katakanlah namenode down, disk-nya rusak dan tidak bisa di-recover, ya wes. Itu artinya sama aja semua data/file di datanode tidak bisa digunakan lagi karena detail data/file tersebut ada di namenode. Sehingga namenode perlu *high availability*. Lalu apa secondary namenode? Merupakan backup dari NameNode? Bukan 100% backup. Cara kerjanya seperti ini:
 1.	Untuk meng-handle metadata, namenode menyimpan 2 files yaitu **FsImage** dan **EditLogs**
 2.	FsImages dan EditLogs ini gunanya untuk menyimpan semua perubahan yang terjadi di HDFS. FsImages untuk menyimpan perubahan yang terjadi > 1 jam dari sekarang (default) & disimpan di disk. Sedangkan EditLogs menyimpan perubahan yang baru terjadi (<= 1 jam dari sekarang) dan disimpan di memory.
