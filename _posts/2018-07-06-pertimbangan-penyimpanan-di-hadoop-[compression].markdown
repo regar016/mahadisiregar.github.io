@@ -38,17 +38,21 @@ Berikut adalah type compresi yang ada di Hadoop
 
 
 **gzip**
+
 Gzip mantap dalam hal kompresi. Dibandingkan dengan snappy, size yang dihasilkan bisa 2.5kali lebih kecil. Tetapi write performance-nya bisa 2kali lebih lama dibandingkan dengan snappy. 
 Ingat kembali bahwa size berhubungan dengan block size, block size berhubungan dengan jumlah task processing, jumlah task processing berhubungan dengan performance. Artinya karena gzip menghasilkan file yang lebih kecil, jumlah block-nya juga lebih kecil, sehingga jumlah task yang muncul untuk memproses data tersebut juga lebih sedikit.
 
 **bzip2**
+
 Hasil kompresi bzip lebih kecil lagi dibandingkan dengan gzip, 9% lebih kecil. Tapi performance-nya (write/read) 10 kali lebih lambat dibandingkan dengan gzip. Bzip ini sebenarnya kurang ideal untuk hadoop, karena salah satu component big data kan velocity (kecepatan processing) juga. Tapi jika Anda lebih mengutamakan ukuran dibandingkan dengan performance, ya cocok menggunakan Bzip dibandingkan dengan gzip, snappy, dll. Contoh case-nya untuk menyimpan semacam archive data yang jarang diakses dan dalam ukuran besar. 
 
 **LZO**
+
 LZO ini mirip dengan snappy, mengutamakan speed dibandingkan size. LZO ini splittable, tetapi harus ada indexing. 
 Dibandingkan dengan gzip misalnya, process read LZO lebih cepat 2 kali karena decompress LZO juga 2 kali lebih cepat.
 
 **Snappy**
+
 Snappy ini dikembangkan oleh Google, tetapi tujuan utamanya bukan untuk menghasilkan file yang sangat kecil. Snappy lebih mengutamakan performance/speed dibadingkan size/ukuran. File kompresi snappy bisa 20% hingga 100% lebih besar
 
 Dari 4 type compressi tersebut, hingga saat ini saya baru pernah mencoba gzip dan snappy. Dan untuk final storage, di tempat pekerjaan sebelumnya kami menggunakan snappy dengan alasan performance.
@@ -58,6 +62,7 @@ Apa sihhhh splittable? Misalkan file 1GB (tanpa compressi) hendak di proses. 1 b
 File 1GB tadi lalu di-compress menggunakan gzip. Masih sama, HDFS akan menyimpan file ini ke 8 block. Ukuran file tentu akan lebih kecil tetapi karena gzip tidak splittable, maka data 8 block tersebut hanya akan diolah oleh 1 map task karena MapReduce-nya tidak bisa melakukan split. Processing time-nya tentu akan menjadi lebih lama.
 
 **Lalu apa yang di-rekomendasikan mengenai compression ini?**
+
 Sebenarnya kalau menggunakan file format Avro, SequenceFiles, dll (container file formats), ya semua compression di atas ujung-ujungnya mirip splittable juga. Karena container file formats mendukung block record compression (artinya sekumpulan record dicompress) lalu sekumpulan block ini yang nantinya akan di pas ke map task. Bahkan container file formats mendukung compression level record (per 1 record). Tetapi jika tidak disimpan dengan container file formats, makan gunakanlah bzip sehingga ketika diproses file-nya bisa di-split oleh MapReduce.
 
 Demikian untuk saat ini. Untuk contoh code penyimpanan data menggunakan compression di atas akan dibahas di part selanjutnya, sekaligus sebagai pembuktian.
